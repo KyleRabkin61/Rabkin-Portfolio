@@ -1,0 +1,137 @@
+.navbar {
+    transition: all 0.25s;
+  }
+  
+  .navbar-brand img {
+    height: clamp(70px, 11vw, 90px);
+  }
+  
+  .navbar .container-fluid {
+    padding-right: calc(var(--bs-gutter-x)* .5) !important;
+    padding-left: calc(var(--bs-gutter-x)* .5) !important;
+  
+  }
+  
+  .navbar-scrolled {
+    background-color: #2D2D2D;
+  }
+  
+  .nav-link {
+    color: white;
+    font-size: clamp(20px, 2vw, 40px);
+    font-weight: 1000;
+    letter-spacing: 0.2px;
+    margin: 0 20px;
+    font-family: "Josefin Sans", sans-serif;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #2D2D2D;
+    paint-order: stroke fill;
+    position: relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    opacity: 0;
+    transition: all 0.25s;
+    height: 4px;
+    width: 100%;
+    background: #7DABFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .nav-link:hover {
+    color: #7DABFF;
+  }
+  
+  .nav-link:hover::after {
+    opacity: 1;
+  }
+  
+  .nav-link:focus {
+    color: white !important;
+  }
+  
+  /*hamburger menu css*/
+  
+  .navbar-toggler {
+    width: 50px;
+    height: 30px;
+    position: relative;
+    transition: all .25s;
+  }
+  
+  .navbar-toggler,
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+  }
+  
+  .navbar-toggler span {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .toggler-icon {
+    display: block;
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    top: 10px;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .middle-bar {
+    margin-top: 0px;
+  }
+  
+  .navbar-toggler .top-bar {
+    margin-top: 0px;
+    transform: rotate(135deg);
+  }
+  
+  .navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  
+  .navbar-toggler .bottom-bar {
+    margin-top: 0px;
+    transform: rotate(-135deg);
+  }
+  
+  .navbar-toggler.collapsed .top-bar {
+    margin-top: -20px;
+    transform: rotate(0deg);
+  }
+  
+  .navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  
+  .navbar-toggler.collapsed .bottom-bar {
+    margin-top: 20px;
+    transform: rotate(0deg);
+  }
+  .header {
+    height: 100svh;
+  }
+  .header-name {
+    background: gray;
+    height: auto;
+  }
+
+  .header-img {
+    background: black;
+    height: auto;
+  }
