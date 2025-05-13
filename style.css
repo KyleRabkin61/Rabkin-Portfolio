@@ -124,7 +124,10 @@
     transform: rotate(0deg);
   }
   .header {
-    height: 100svh;
+    min-height: 700px;
+    height: 90svh;
+    position: relative;
+    top: clamp(70px, 11vw, 90px);
   }
   .header-name {
     background: gray;
