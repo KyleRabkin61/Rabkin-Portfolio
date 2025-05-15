@@ -1,4 +1,26 @@
-h1 {
+.header {
+  height: 100svh;
+  background: #1F2020;
+}
+
+.blocks {
   position: relative;
-  top: 200px;
+  top: 40%;
+  height: fit-content;
+}
+
+.block {
+  font-size: clamp(30px, 5vw, 70px);
+  color: white;
+}
+
+.circle-shape {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: clamp(350px, 40vw, 600px);
+	height: clamp(350px, 40vw, 600px);
+	border-radius: 100%;
+  border: 5px solid #7DABFF;
 }
