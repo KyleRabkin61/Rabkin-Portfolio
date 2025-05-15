@@ -21,13 +21,14 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
     <!-- Navbar (fixed top navigation bar) -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-scrolled">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <!-- Navbar brand/logo -->
             <a class="navbar-brand" href="index.html">
@@ -63,9 +64,11 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid" id="vue_app">
+
+        <!-- header section -->
         <div class="header row d-flex justify-content-center">
-                <div class="circle-shape"></div>
+            <div class="circle-shape"></div>
             <div class="blocks d-flex justify-content-center align-items center">
                 <div class="block-1 block">R</div>
                 <div class="block-2 block">A</div>
@@ -76,8 +79,14 @@
             </div>
             <div class="d-flex justify-content-center flex-column align-items-center header-info">
                 <p class="header-job text-center">Web Developer and Programmer</p>
-                <button class="btn explore">Explore</button>
+                <button class="btn explore" onclick="scrollToSection('about');">Explore</button>
             </div>
+        </div>
+
+        <!-- about section -->
+        <div class="about" id="about">
+            <h1 class="about-title text-center">About Me</h1>
+            <p class="description text-center">I’m currently a senior at Marlboro High School and have committed to Stevens Institute of Technology, where I plan to major in Computer Science with a minor in Cybersecurity. I'm passionate about technology and excited to dive deeper into the field in college. Outside of academics, I play hockey, which has taught me discipline, teamwork, and perseverance—qualities I carry into everything I do.</p>
         </div>
     </div>
     <!-- Bootstrap JavaScript Libraries -->

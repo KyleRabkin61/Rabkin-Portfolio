@@ -1,3 +1,5 @@
+let header = document.querySelector(".header");
+let height = parseInt(getComputedStyle(header).height, 10);
 let nav = document.querySelector(".navbar");
 let navHeight = parseInt(getComputedStyle(nav).height, 10);
 
@@ -61,7 +63,7 @@ gsap.from('.block-1', {
 })
 gsap.from('.block-2', {
     x: '15vw',
-    y: '15vw',
+    y: '14.5vw',
     scale: "3.1",
     opacity: 0.5,
     ease: 'power1.inOut',
