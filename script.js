@@ -1,3 +1,25 @@
+const vue_app = Vue.createApp({
+    data() {
+        return {
+            skills: [],
+            websites: []
+        };
+    },
+    created() {
+        Promise.all([
+            fetch('skills.json').then(response => response.json()),
+            fetch('websites.json').then(response => response.json())
+        ])
+        .then(([skillData, websiteData]) => {
+            this.skills = skillData;
+            this.websites = websiteData;
+        })
+        .catch(error => console.error("Error fetching data:", error));
+    }
+});
+
+vue_app.mount("#vue_app");
+
 let header = document.querySelector(".header");
 let height = parseInt(getComputedStyle(header).height, 10);
 let nav = document.querySelector(".navbar");
@@ -47,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 gsap.from('.circle-shape', {
     scale: 0.5,
+    background: '#252525',
     ease: 'power1.inOut',
     duration: 2,
     delay: 0.5

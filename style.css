@@ -14,7 +14,8 @@
 }
 
 .navbar-scrolled {
-  background-color: #2D2D2D;
+  background-color: #1F2020;
+  border-bottom: 5px solid white;
 }
 
 .nav-link {
@@ -25,7 +26,7 @@
   margin: 0 20px;
   font-family: "Playfair Display", serif;
   -webkit-text-stroke-width: 5px;
-  -webkit-text-stroke-color: #2D2D2D;
+  -webkit-text-stroke-color: #1F2020;
   paint-order: stroke fill;
   position: relative;
 }
@@ -133,7 +134,19 @@
 
 .header {
   height: 100svh;
-  background: #1F2020;
+  background: repeating-linear-gradient(
+    to right,
+    #252525 0%,
+    #252525 20%,
+    #383838 20%,
+    #383838 40%,
+    #383838 40%,
+    #383838 60%,
+    #383838 60%,
+    #383838 80%,
+    #252525 80%,
+    #252525 100%
+  );
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
@@ -159,7 +172,9 @@
 	width: clamp(350px, 40vw, 600px);
 	height: clamp(350px, 40vw, 600px);
 	border-radius: 100%;
+  background: #1F2020;;
   border: 5px solid #7DABFF;
+  box-shadow: 0px 1px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
 .header-info {
@@ -169,6 +184,7 @@
 
 .header-job {
   color: white;
+  font-family: "Ancizar Sans", sans-serif;
   width: fit-content;
   height: fit-content;
   opacity: 0;
@@ -177,6 +193,7 @@
 .explore {
   background: #2D2D2D;
   color: white;
+  font-family: "Ancizar Sans", sans-serif;
   box-shadow: 0px 1px 4px 5px rgba(0, 0, 0, 0.5);
   padding: 10px 30px;
   border: 2px solid white;
@@ -203,7 +220,14 @@
 
 .about {
   background: #333333;
-  height: 1000px;
+  height: auto;
+  padding: 150px 0;
+}
+
+.about-row {
+  position: relative;
+  padding: 50px;
+  margin: 0;
 }
 
 .about-title {
@@ -211,7 +235,6 @@
   font-weight: 700;
   color: white;
   position: relative;
-  top: 75px;
   margin-bottom: 50px;
   font-family: "Playfair Display", serif;
 }
@@ -229,9 +252,65 @@
 }
 
 .about-text {
-  background-color: blue;
+  padding: 40px;
+}
+
+.the-about-text {
+  font-size: clamp(20px, 2vw, 30px);
+  font-family: "Ancizar Sans", sans-serif;
+  color: white;
 }
 
 .about-img {
+  width: clamp(300px, 20vw, 400px);
+  border: 5px solid white;
+  box-shadow: 0px 1px 4px 5px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+/* skills css */
+
+.skills {
+  background: #D9D9D9;
+  height: auto;
+  padding: 150px 0;
+}
+
+.skills-row {
+  position: relative;
+  padding: 50px;
+  margin: 0;
+}
+
+.skills-title {
+  font-size: 50px;
+  font-weight: 700;
+  color: #1F2020;
+  position: relative;
+  margin-bottom: 50px;
+  font-family: "Playfair Display", serif;
+}
+
+.skills-title::after {
+  position: absolute;
+  content: ' ';
+  width: clamp(75px, 6vw, 150px);
+  height: 4px;
+  left: 50%;
+  top: 75px;
+  bottom: -10px;
+  background-image: linear-gradient(to right, #2076DB, #7DABFF);
+  transform: translate(-50%);
+}
+
+.skill-img {
   width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 20px;
+}
+
+.skill-name {
+  color: #1F2020;
+  font-family: "Playfair Display", serif;
 }

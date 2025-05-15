@@ -15,13 +15,17 @@
     <!-- CSS link -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Vue.js framework -->
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+
     <!-- GSAP link -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
 
 </head>
@@ -85,13 +89,26 @@
 
         <!-- about section -->
         <div class="about" id="about">
-            <h1 class="about-title text-center">About Me</h1>
-            <div class="row d-flex justify-content-center align-items-center flex-column">
-                <div class="col-12 col-lg-6 about-text">
-                    <h1>hi</h1>
+            <div class="about-row row d-flex justify-content-center align-items-center">
+                <div class="col-12 col-lg-8 about-text">
+                    <h1 class="about-title text-center">About Me</h1>
+                    <p class="the-about-text text-center">I’m currently a senior at Marlboro High School and have
+                        committed to Stevens Institute of Technology, where I plan to major in Computer Science with a
+                        minor in Cybersecurity. I'm passionate about technology and excited to dive deeper into the
+                        field in college. Outside of academics, I play hockey, which has taught me discipline, teamwork,
+                        and perseverance—qualities I carry into everything I do.</p>
                 </div>
-                <div class="col-12 col-lg-6 about-image">
+                <div class="col-12 col-lg-4 about-image d-flex justify-content-center align-items-center">
                     <img src="imgs/header-img.png" alt="" class="about-img">
+                </div>
+            </div>
+        </div>
+        <div class="skills" id="skills">
+            <h1 class="skills-title text-center">Skills</h1>
+            <div class="skills-row row d-flex justify-content-center align-items-center">
+                <div class="col-6 col-lg-4 d-flex justify-content-center align-items-center flex-column" v-for="skill in skills" :key="skill.id">
+                    <img v-bind:src="skill.img" alt="" class="skill-img">
+                    <h1 class="skill-name">{{skill.name}}</h1>
                 </div>
             </div>
         </div>
