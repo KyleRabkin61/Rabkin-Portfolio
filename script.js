@@ -45,8 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 gsap.from('.circle-shape', {
     scale: 0.5,
-    rotation:360, 
-    transformOrigin:"50% 50%",
     ease: 'power1.inOut',
     duration: 2,
     delay: 0.5
@@ -107,7 +105,7 @@ gsap.from('.block-6', {
     delay: 0.5
 })
 
-gsap.to(['.navbar', '.explore'], {
+gsap.to(['.navbar', '.explore', '.header-job'], {
     duration: 1,
     delay: 2.5,
     opacity: 1

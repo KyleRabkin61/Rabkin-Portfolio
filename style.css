@@ -132,18 +132,20 @@
 
 .blocks {
   position: relative;
-  top: 40%;
+  top: 45%;
   height: fit-content;
 }
 
 .block {
-  font-size: clamp(30px, 5vw, 70px);
+  font-size: clamp(30px, 7vw, 70px);
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
   color: white;
 }
 
 .circle-shape {
 	position: absolute;
-	top: 50%;
+	top: 55%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: clamp(350px, 40vw, 600px);
@@ -152,10 +154,22 @@
   border: 5px solid #7DABFF;
 }
 
+.header-info {
+  position: relative;
+  bottom: 120px;
+}
+
+.header-job {
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  opacity: 0;
+}
+
 .explore {
   background: #2D2D2D;
   color: white;
-  box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 4px 5px rgba(0, 0, 0, 0.5);
   padding: 20px 30px;
   border: 2px solid white;
   width: fit-content;
@@ -166,4 +180,13 @@
 
 .explore:hover {
   background: #2D2D2D;
+  color: white;
+  border: 2px solid #7DABFF;
+}
+
+.explore:active {
+  background: #2D2D2D !important;
+  color: white !important;
+  border: 2px solid #7DABFF !important;
+  box-shadow: none !important;
 }
