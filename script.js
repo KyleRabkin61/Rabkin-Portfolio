@@ -108,7 +108,7 @@ gsap.from('.block-6', {
 })
 
 gsap.to(['.navbar', '.explore', '.header-job'], {
-    duration: 1,
+    duration: 1.5,
     delay: 2.5,
     opacity: 1
 })

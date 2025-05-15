@@ -228,10 +228,10 @@
   transform: translate(-50%);
 }
 
-.description {
-  color: white;
-  position: relative;
-  top: 100px;
-  font-size: 1.5vw;
-  margin: 0 100px;
+.about-text {
+  background-color: blue;
+}
+
+.about-img {
+  width: 200px;
 }
