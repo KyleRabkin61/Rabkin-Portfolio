@@ -21,9 +21,45 @@
 </head>
 
 <body>
-
+    <!-- Navbar (fixed top navigation bar) -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-scrolled">
+        <div class="container-fluid">
+            <!-- Navbar brand/logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="imgs/kr-logo.png" alt="KR">
+            </a>
+            <!-- Hamburger menu -->
+            <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon middle-bar"></span>
+                <span class="toggler-icon bottom-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button class="nav-link text-lg-center" aria-current="page"
+                            onclick="scrollToSection('about');">About Me</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link text-lg-center" aria-current="page"
+                            onclick="scrollToSection('skills');">Skills</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link text-lg-center" aria-current="page"
+                            onclick="scrollToSection('work');">My Work</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link text-lg-center" aria-current="page"
+                            onclick="scrollToSection('contact');">Contact</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container-fluid">
-        <div class="header row">
+        <div class="header row d-flex justify-content-center">
                 <div class="circle-shape"></div>
             <div class="blocks d-flex justify-content-center align-items center">
                 <div class="block-1 block">R</div>
@@ -33,6 +69,7 @@
                 <div class="block-5 block">I</div>
                 <div class="block-6 block">N</div>
             </div>
+            <button class="btn explore">Explore</button>
         </div>
     </div>
     <!-- Bootstrap JavaScript Libraries -->
