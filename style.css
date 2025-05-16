@@ -153,12 +153,12 @@
 
 .blocks {
   position: relative;
-  top: 45%;
+  top: 25%;
   height: fit-content;
 }
 
 .block {
-  font-size: clamp(30px, 7vw, 70px);
+  font-size: clamp(25px, 7vw, 70px);
   font-family: "Playfair Display", serif;
   font-weight: bold;
   color: white;
@@ -179,7 +179,7 @@
 
 .header-info {
   position: relative;
-  bottom: 120px;
+  top: 120px;
 }
 
 .header-job {
@@ -216,6 +216,15 @@
   box-shadow: none !important;
 }
 
+@media screen and (max-height: 600px) {
+  .header {
+    height: 600px;
+  }
+  .circle-shape {
+    transform: translate(-50%, -30%);
+  }
+}
+
 /* about css */
 
 .about {
@@ -231,7 +240,7 @@
 }
 
 .about-title {
-  font-size: 60px;
+  font-size: clamp(40px, 7vw, 60px);
   font-weight: 700;
   color: white;
   position: relative;
@@ -283,7 +292,7 @@
 }
 
 .skills-title {
-  font-size: 60px;
+  font-size: clamp(50px, 7vw, 60px);
   font-weight: 700;
   color: #1F2020;
   position: relative;
