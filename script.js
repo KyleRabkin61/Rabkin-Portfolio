@@ -67,6 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+gsap.registerPlugin(ScrollTrigger);
+
 gsap.from('.circle-shape', {
     scale: 0.5,
     background: '#252525',
@@ -134,4 +136,11 @@ gsap.to(['.navbar', '.explore', '.header-job'], {
     duration: 1.5,
     delay: 2.5,
     opacity: 1
+})
+
+gsap.from(['about-title', '.about-text', '.about-img'], {
+    y: 100,
+    duration: 2,
+    opacity: 0,
+    scrollTrigger: ".about-text",
 })

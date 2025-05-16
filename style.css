@@ -231,7 +231,7 @@
 }
 
 .about-title {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 700;
   color: white;
   position: relative;
@@ -283,7 +283,7 @@
 }
 
 .skills-title {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 700;
   color: #1F2020;
   position: relative;
@@ -304,8 +304,8 @@
 }
 
 .skill-img {
-  width: 200px;
-  height: 200px;
+  width: clamp(100px, 10vw, 150px);
+  height: clamp(100px, 10vw, 150px);
   object-fit: cover;
   margin: 20px;
 }

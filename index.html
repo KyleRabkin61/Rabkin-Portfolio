@@ -21,6 +21,8 @@
     <!-- GSAP link -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,7 +108,8 @@
         <div class="skills" id="skills">
             <h1 class="skills-title text-center">Skills</h1>
             <div class="skills-row row d-flex justify-content-center align-items-center">
-                <div class="col-6 col-lg-4 d-flex justify-content-center align-items-center flex-column" v-for="skill in skills" :key="skill.id">
+                <div class="col-6 col-lg-4 d-flex justify-content-center align-items-center flex-column skill"
+                    v-for="skill in skills" :key="skill.id">
                     <img v-bind:src="skill.img" alt="" class="skill-img">
                     <h1 class="skill-name">{{skill.name}}</h1>
                 </div>
