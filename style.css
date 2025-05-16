@@ -323,3 +323,124 @@
   font-family: "Playfair Display", serif;
   font-size: clamp(20px, 5vw, 35px);
 }
+
+.contact {
+  background: #383838;
+  height: auto;
+}
+
+.contact-title {
+  font-size: clamp(40px, 7vw, 60px);
+  font-weight: 700;
+  color: white;
+  position: relative;
+  margin-bottom: 50px;
+  font-family: "Playfair Display", serif;
+}
+
+.contact-title::after {
+  position: absolute;
+  content: ' ';
+  width: clamp(75px, 6vw, 150px);
+  height: 4px;
+  left: 50%;
+  top: 75px;
+  bottom: -10px;
+  background-image: linear-gradient(to right, #2076DB, #7DABFF);
+  transform: translate(-50%);
+}
+
+.contact-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 820px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-info {
+  background: #D9D9D9;
+}
+
+.contact-form {
+  background: #333333;
+  position: relative;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, transparent 20%, #1F2020);
+  position: absolute;
+}
+
+.circle.one {
+  width: 130px;
+  height: 130px;
+  top: 130px;
+  right: -40px;
+}
+
+.circle.two {
+  width: 80px;
+  height: 80px;
+  top: 10px;
+  right: 30px;
+}
+
+.contact-form:before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: #333333;
+  transform: rotate(45deg);
+  top: 50px;
+  left: -13px;
+}
+
+form {
+  padding: 2.3rem 2.2rem;
+  z-index: 10;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-form-title {
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 0.7rem;
+}
+
+.input-container {
+  position: relative;
+  margin: 1rem 0;
+}
+
+label {
+  display: none;
+}
+
+.input {
+  width: 100%;
+  outline: none;
+  border: 2px solid #D9D9D9;
+}
