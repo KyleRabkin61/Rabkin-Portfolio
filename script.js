@@ -90,6 +90,34 @@ inputs.forEach(input => {
     input.addEventListener("blur", blurFunc);
 })
 
+window.onload = function () {
+    document.getElementsByClassName('input-container').textContent = ''
+};
+
+function handleSubmit(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const form = document.getElementById("contactForm");
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("Message sent!");
+        form.reset(); // Reset the form fields
+      } else {
+        alert("There was a problem sending your message.");
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("There was a problem sending your message.");
+    });
+  }
+
 
 // gsap animations
 
