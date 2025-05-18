@@ -1,3 +1,5 @@
+// vue that loads in skills and websites
+
 const vue_app = Vue.createApp({
     data() {
         return {
@@ -10,11 +12,11 @@ const vue_app = Vue.createApp({
             fetch('skills.json').then(response => response.json()),
             fetch('websites.json').then(response => response.json())
         ])
-        .then(([skillData, websiteData]) => {
-            this.skills = skillData;
-            this.websites = websiteData;
-        })
-        .catch(error => console.error("Error fetching data:", error));
+            .then(([skillData, websiteData]) => {
+                this.skills = skillData;
+                this.websites = websiteData;
+            })
+            .catch(error => console.error("Error fetching data:", error));
     }
 });
 
@@ -66,6 +68,30 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// contact js
+
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+}
+
+function blurFunc() {
+    let parent = this.parentNode;
+    if (this.value == "") {
+        parent.classList.remove("focus");
+    }
+}
+
+inputs.forEach(input => {
+    input.addEventListener("focus", focusFunc);
+    input.addEventListener("blur", blurFunc);
+})
+
+
+// gsap animations
 
 gsap.registerPlugin(ScrollTrigger);
 
