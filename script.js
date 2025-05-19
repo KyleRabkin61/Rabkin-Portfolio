@@ -3,17 +3,20 @@
 const vue_app = Vue.createApp({
     data() {
         return {
-            skills: [],
+            langs: [],
+            libraries: [],
             websites: []
         };
     },
     created() {
         Promise.all([
-            fetch('skills.json').then(response => response.json()),
+            fetch('langs.json').then(response => response.json()),
+            fetch('libraries.json').then(response => response.json()),
             fetch('websites.json').then(response => response.json())
         ])
-            .then(([skillData, websiteData]) => {
-                this.skills = skillData;
+            .then(([langData, libraryData, websiteData]) => {
+                this.langs = langData;
+                this.libraries = libraryData
                 this.websites = websiteData;
             })
             .catch(error => console.error("Error fetching data:", error));

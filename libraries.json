@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Bootstrap",
+        "img": "imgs/bootstrap.logo.png",
+        "link": ""
+    },
+    {
+        "name": "jQuery",
+        "img": "imgs/jQuery.logo.png",
+        "link": ""
+    },
+        {
+        "name": "Vue.js",
+        "img": "imgs/vue.logo.png",
+        "link": ""
+    },
+        {
+        "name": "GSAP",
+        "img": "imgs/gsap.logo.png",
+        "link": ""
+    }
+]

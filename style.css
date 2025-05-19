@@ -311,17 +311,41 @@
   transform: translate(-50%);
 }
 
+.skill {
+  transition: 0.3s;
+}
+
 .skill-img {
-  width: clamp(75px, 10vw, 125px);
-  height: clamp(75px, 10vw, 125px);
+  width: clamp(85px, 10vw, 125px);
+  height: clamp(85px, 10vw, 125px);
   object-fit: cover;
+  background: #333333;
   margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 4px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
 }
 
 .skill-name {
   color: #1F2020;
   font-family: "Playfair Display", serif;
   font-size: clamp(20px, 5vw, 35px);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.skill-img:hover {
+  scale: 1.1;
+  box-shadow: none;
+}
+
+.skill-img:hover .skill-name {
+  opacity: 1;
+}
+
+.library .skill-img {
+  cursor: pointer;
 }
 
 /* contact css */
