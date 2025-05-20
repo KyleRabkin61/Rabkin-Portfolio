@@ -18,6 +18,10 @@
     <!-- Vue.js framework -->
     <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
 
+    <!-- jQuery link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
     <!-- GSAP link -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
@@ -128,7 +132,9 @@
                     <div class="row">
                         <div class="col-6 d-flex justify-content-center align-items-center flex-column skill library"
                             v-for="library in libraries" :key="library.id">
-                            <img v-bind:src="library.img" alt="" class="skill-img">
+                            <a :href="library.link" target="_blank">
+                                <img v-bind:src="library.img" alt="" class="skill-img">
+                            </a>
                             <h1 class="skill-name">{{library.name}}</h1>
                         </div>
                     </div>

@@ -340,10 +340,6 @@
   box-shadow: none;
 }
 
-.skill-img:hover .skill-name {
-  opacity: 1;
-}
-
 .library .skill-img {
   cursor: pointer;
 }

@@ -2,21 +2,21 @@
     {
         "name": "Bootstrap",
         "img": "imgs/bootstrap.logo.png",
-        "link": ""
+        "link": "https://getbootstrap.com/"
     },
     {
         "name": "jQuery",
         "img": "imgs/jQuery.logo.png",
-        "link": ""
+        "link": "https://jquery.com/"
     },
         {
         "name": "Vue.js",
         "img": "imgs/vue.logo.png",
-        "link": ""
+        "link": "https://vuejs.org/"
     },
         {
         "name": "GSAP",
         "img": "imgs/gsap.logo.png",
-        "link": ""
+        "link": "https://gsap.com/"
     }
 ]

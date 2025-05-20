@@ -72,6 +72,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// skill hover animation
+
+$(document).ready(() => {
+
+  $('.skill-img').on('mouseenter', function () {
+    $(this).closest('.skill').find('.skill-name').css("opacity", "1");
+  });
+
+  $('.skill-img').on('mouseleave', function () {
+    $(this).closest('.skill').find('.skill-name').css("opacity", "0");
+  });
+
+});
+
 // contact js
 
 const inputs = document.querySelectorAll(".input");
@@ -104,22 +118,22 @@ function handleSubmit(event) {
     const formData = new FormData(form);
 
     fetch(form.action, {
-      method: "POST",
-      body: formData
+        method: "POST",
+        body: formData
     })
-    .then(response => {
-      if (response.ok) {
-        alert("Message sent!");
-        form.reset(); // Reset the form fields
-      } else {
-        alert("There was a problem sending your message.");
-      }
-    })
-    .catch(error => {
-      console.error("Error:", error);
-      alert("There was a problem sending your message.");
-    });
-  }
+        .then(response => {
+            if (response.ok) {
+                alert("Message sent!");
+                form.reset(); // Reset the form fields
+            } else {
+                alert("There was a problem sending your message.");
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("There was a problem sending your message.");
+        });
+}
 
 
 // gsap animations
