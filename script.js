@@ -16,8 +16,19 @@ const vue_app = Vue.createApp({
         ])
             .then(([langData, libraryData, websiteData]) => {
                 this.langs = langData;
-                this.libraries = libraryData
+                this.libraries = libraryData;
                 this.websites = websiteData;
+
+                // Wait until Vue updates the DOM with new data
+                this.$nextTick(() => {
+                    gsap.registerPlugin(ScrollTrigger);
+                    gsap.to('.skill', {
+                        opacity: 1,
+                        stagger: 0.2,
+                        duration: 0.5,
+                        scrollTrigger: ".langueges-title"
+                    });
+                });
             })
             .catch(error => console.error("Error fetching data:", error));
     }
@@ -72,72 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// skill hover animation
-
-$(document).ready(() => {
-
-  $('.skill-img').on('mouseenter', function () {
-    $(this).closest('.skill').find('.skill-name').css("opacity", "1");
-  });
-
-  $('.skill-img').on('mouseleave', function () {
-    $(this).closest('.skill').find('.skill-name').css("opacity", "0");
-  });
-
-});
-
-// contact js
-
-const inputs = document.querySelectorAll(".input");
-
-function focusFunc() {
-    let parent = this.parentNode;
-    parent.classList.add("focus");
-}
-
-function blurFunc() {
-    let parent = this.parentNode;
-    if (this.value == "") {
-        parent.classList.remove("focus");
-    }
-}
-
-inputs.forEach(input => {
-    input.addEventListener("focus", focusFunc);
-    input.addEventListener("blur", blurFunc);
-})
-
-window.onload = function () {
-    document.getElementsByClassName('input-container').textContent = ''
-};
-
-function handleSubmit(event) {
-    event.preventDefault(); // Prevent default form submission
-
-    const form = document.getElementById("contactForm");
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-        method: "POST",
-        body: formData
-    })
-        .then(response => {
-            if (response.ok) {
-                alert("Message sent!");
-                form.reset(); // Reset the form fields
-            } else {
-                alert("There was a problem sending your message.");
-            }
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            alert("There was a problem sending your message.");
-        });
-}
-
-
 // gsap animations
-
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from('.circle-shape', {
@@ -209,9 +155,72 @@ gsap.to(['.navbar', '.explore', '.header-job'], {
     opacity: 1
 })
 
-gsap.from(['about-title', '.about-text', '.about-img'], {
+gsap.from(['.about-text', '.about-img'], {
     y: 100,
     duration: 2,
     opacity: 0,
     scrollTrigger: ".about-text",
 })
+
+// skill hover animation
+
+$(document).ready(() => {
+
+    $('.skill-img').on('mouseenter', function () {
+        $(this).closest('.skill').find('.skill-name').css("opacity", "1");
+    });
+
+    $('.skill-img').on('mouseleave', function () {
+        $(this).closest('.skill').find('.skill-name').css("opacity", "0");
+    });
+
+});
+
+// contact js
+
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+}
+
+function blurFunc() {
+    let parent = this.parentNode;
+    if (this.value == "") {
+        parent.classList.remove("focus");
+    }
+}
+
+inputs.forEach(input => {
+    input.addEventListener("focus", focusFunc);
+    input.addEventListener("blur", blurFunc);
+})
+
+window.onload = function () {
+    document.getElementsByClassName('input-container').textContent = ''
+};
+
+function handleSubmit(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const form = document.getElementById("contactForm");
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: "POST",
+        body: formData
+    })
+        .then(response => {
+            if (response.ok) {
+                alert("Message sent!");
+                form.reset(); // Reset the form fields
+            } else {
+                alert("There was a problem sending your message.");
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("There was a problem sending your message.");
+        });
+}

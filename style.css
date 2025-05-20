@@ -134,19 +134,17 @@
 
 .header {
   height: 100svh;
-  background: repeating-linear-gradient(
-    to right,
-    #252525 0%,
-    #252525 20%,
-    #383838 20%,
-    #383838 40%,
-    #383838 40%,
-    #383838 60%,
-    #383838 60%,
-    #383838 80%,
-    #252525 80%,
-    #252525 100%
-  );
+  background: repeating-linear-gradient(to right,
+      #252525 0%,
+      #252525 20%,
+      #383838 20%,
+      #383838 40%,
+      #383838 40%,
+      #383838 60%,
+      #383838 60%,
+      #383838 80%,
+      #252525 80%,
+      #252525 100%);
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
@@ -165,14 +163,15 @@
 }
 
 .circle-shape {
-	position: absolute;
-	top: 55%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: clamp(350px, 40vw, 600px);
-	height: clamp(350px, 40vw, 600px);
-	border-radius: 100%;
-  background: #1F2020;;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(350px, 40vw, 600px);
+  height: clamp(350px, 40vw, 600px);
+  border-radius: 100%;
+  background: #1F2020;
+  ;
   border: 5px solid #7DABFF;
   box-shadow: 0px 1px 4px 5px rgba(0, 0, 0, 0.5);
 }
@@ -220,6 +219,7 @@
   .header {
     height: 600px;
   }
+
   .circle-shape {
     transform: translate(-50%, -30%);
   }
@@ -230,7 +230,7 @@
 .about {
   background: #333333;
   height: auto;
-  padding: clamp(50px,7vw, 75px) 0;
+  padding: clamp(50px, 7vw, 75px) 0;
 }
 
 .about-row {
@@ -311,13 +311,19 @@
   transform: translate(-50%);
 }
 
+.langueges-title {
+  font-size: 50px;
+  font-family: "Ancizar Sans", sans-serif;
+}
+
 .skill {
   transition: 0.3s;
+  opacity: 0;
 }
 
 .skill-img {
-  width: clamp(85px, 10vw, 125px);
-  height: clamp(85px, 10vw, 125px);
+  width: clamp(85px, 10vw, 135px);
+  height: clamp(85px, 10vw, 135px);
   object-fit: cover;
   background: #333333;
   margin: 20px;
@@ -329,7 +335,7 @@
 
 .skill-name {
   color: #1F2020;
-  font-family: "Playfair Display", serif;
+  font-family: "Ancizar Sans", sans-serif;
   font-size: clamp(20px, 5vw, 35px);
   opacity: 0;
   transition: 0.3s;
@@ -493,7 +499,7 @@ textarea.input {
   pointer-events: none;
   z-index: 1000;
   transition: 0.5s;
-    font-family: "Ancizar Sans", sans-serif;
+  font-family: "Ancizar Sans", sans-serif;
 }
 
 .input-container.textarea label {
@@ -513,7 +519,7 @@ textarea.input {
   cursor: pointer;
   transition: 0.3s;
   margin: 0;
-    font-family: "Ancizar Sans", sans-serif;
+  font-family: "Ancizar Sans", sans-serif;
 }
 
 .contact-btn:hover {
@@ -559,7 +565,7 @@ textarea.input {
   transform: translateY(-50%);
   left: 25px;
   font-size: 0.8rem;
-    font-family: "Ancizar Sans", sans-serif;
+  font-family: "Ancizar Sans", sans-serif;
 }
 
 .input-container.focus span:before,
@@ -583,7 +589,7 @@ textarea.input {
 .text {
   color: #1F2020;
   margin: 1.5rem 0 2rem 0;
-    font-family: "Ancizar Sans", sans-serif;
+  font-family: "Ancizar Sans", sans-serif;
 }
 
 .information {
@@ -592,7 +598,7 @@ textarea.input {
   margin: 0.7rem 0;
   align-items: center;
   font-size: 0.95rem;
-    font-family: "Ancizar Sans", sans-serif;
+  font-family: "Ancizar Sans", sans-serif;
 }
 
 .social-media {
@@ -623,6 +629,7 @@ textarea.input {
 .bx {
   scale: 1.5;
 }
+
 .social-icons a:hover {
   scale: 1.05;
 }
@@ -686,7 +693,7 @@ textarea.input {
   }
 
   .square {
-    display:none;
+    display: none;
   }
 
   form,
@@ -699,6 +706,7 @@ textarea.input {
   .social-media p {
     font-size: 0.8rem;
   }
+
   .title {
     font-size: 1.15rem;
   }
