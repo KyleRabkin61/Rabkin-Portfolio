@@ -28,6 +28,19 @@ const vue_app = Vue.createApp({
                         duration: 0.5,
                         scrollTrigger: ".langueges-title"
                     });
+
+                    // skill hover animation
+
+                    $(document).ready(() => {
+                        $('.skill-img').hover(
+                            function () {
+                                $(this).closest('.skill').find('.skill-name').css("opacity", "1");
+                            },
+                            function () {
+                                $(this).closest('.skill').find('.skill-name').css("opacity", "0");
+                            }
+                        );
+                    });
                 });
             })
             .catch(error => console.error("Error fetching data:", error));
@@ -162,20 +175,6 @@ gsap.from(['.about-text', '.about-img'], {
     scrollTrigger: ".about-text",
 })
 
-// skill hover animation
-
-$(document).ready(() => {
-
-    $('.skill-img').on('mouseenter', function () {
-        $(this).closest('.skill').find('.skill-name').css("opacity", "1");
-    });
-
-    $('.skill-img').on('mouseleave', function () {
-        $(this).closest('.skill').find('.skill-name').css("opacity", "0");
-    });
-
-});
-
 // contact js
 
 const inputs = document.querySelectorAll(".input");
@@ -202,10 +201,17 @@ window.onload = function () {
 };
 
 function handleSubmit(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
     const form = document.getElementById("contactForm");
     const formData = new FormData(form);
+
+    for (let [name, value] of formData.entries()) {
+        if (value.trim() === "") {
+            alert("Please fill out all fields in order for your message to be sent.");
+            return;
+        }
+    }
 
     fetch(form.action, {
         method: "POST",
@@ -214,7 +220,7 @@ function handleSubmit(event) {
         .then(response => {
             if (response.ok) {
                 alert("Message sent!");
-                form.reset(); // Reset the form fields
+                form.reset();
             } else {
                 alert("There was a problem sending your message.");
             }

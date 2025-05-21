@@ -311,6 +311,11 @@
   transform: translate(-50%);
 }
 
+.skill-hover-text {
+  font-family: "Ancizar Sans", sans-serif;
+  font-size: clamp(20px, 2vw, 30px);
+}
+
 .langueges-title {
   font-size: 50px;
   font-family: "Ancizar Sans", sans-serif;
