@@ -143,6 +143,15 @@
                 </div>
             </div>
         </div>
+        <div class="work" id="work">
+            <h1 class="work-title text-center">My Work</h1>
+            <p class="text-center work-click-text">Take a look at my past websites by clicking on the images below!</p>
+            <div class="row work-row d-flex justify-content-center align-items-center">
+                <div class="p-0 col-6 col-xl-4 d-flex justify-content-center align-items-center website" v-for="website in websites" key="website.id">
+                    <img v-bind:src="website.img" :alt="website.name" class="website-img img-fluid">
+                </div>
+            </div>
+        </div>
         <div class="contact" id="contact">
             <h1 class="contact-title text-center">Contact</h1>
             <div class="contact-container">
