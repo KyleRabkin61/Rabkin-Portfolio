@@ -1,5 +1,32 @@
 [
     {
-        "name": "bla"
+        "name": "Athletic Stadium Reconstruction Website",
+        "img": "website-imgs/athletic-stadium.png",
+        "link": ""
+    },
+    {
+        "name": "Marlboro Tech Ed Website",
+        "img": "website-imgs/marlboro-tech-ed.png",
+        "link": ""
+    },
+    {
+        "name": "Trunk or Treat Website",
+        "img": "website-imgs/trunk-or-treat.png",
+        "link": ""
+    },
+    {
+        "name": "Stevens Recruitment Website",
+        "img": "website-imgs/stevens.png",
+        "link": ""
+    },
+    {
+        "name": "Little Bird Toy Company Website",
+        "img": "website-imgs/little-bird.png",
+        "link": ""
+    },
+    {
+        "name": "On My Birthday Website",
+        "img": "website-imgs/on-my-birthday.png",
+        "link": ""
     }
 ]

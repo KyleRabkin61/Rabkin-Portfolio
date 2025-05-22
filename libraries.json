@@ -1,22 +1,22 @@
 [
     {
         "name": "Bootstrap",
-        "img": "imgs/bootstrap.logo.png",
+        "img": "skill-imgs/bootstrap.logo.png",
         "link": "https://getbootstrap.com/"
     },
     {
         "name": "jQuery",
-        "img": "imgs/jQuery.logo.png",
+        "img": "skill-imgs/jQuery.logo.png",
         "link": "https://jquery.com/"
     },
         {
         "name": "Vue.js",
-        "img": "imgs/vue.logo.png",
+        "img": "skill-imgs/vue.logo.png",
         "link": "https://vuejs.org/"
     },
         {
         "name": "GSAP",
-        "img": "imgs/gsap.logo.png",
+        "img": "skill-imgs/gsap.logo.png",
         "link": "https://gsap.com/"
     }
 ]

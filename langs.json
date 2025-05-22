@@ -1,18 +1,18 @@
 [
     {
         "name": "HTML",
-        "img": "imgs/html.logo.png"
+        "img": "skill-imgs/html.logo.png"
     },
     {
         "name": "CSS",
-        "img": "imgs/css.logo.png"
+        "img": "skill-imgs/css.logo.png"
     },
     {
         "name": "JS",
-        "img": "imgs/js.logo.png"
+        "img": "skill-imgs/js.logo.png"
     },
     {
         "name": "Java",
-        "img": "imgs/java.logo.png"
+        "img": "skill-imgs/java.logo.png"
     }
 ]
