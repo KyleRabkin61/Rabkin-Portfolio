@@ -358,6 +358,7 @@
 
 .work {
   background: #1F2020;
+  padding: 150px 0;
 }
 
 .work-title {
@@ -392,13 +393,19 @@
 
 .website {
   margin: none;
-  background: blue;
+  overflow: hidden;
 }
 
 .website-img {
   height: clamp(250px, 30vw, 600px);
   object-fit: cover;
-  filter: brightness(0.8);
+  transition: all 0.25s;
+}
+
+.website:hover .website-img {
+  filter: brightness(0.5) blur(2px);
+  scale: 1.1;
+  cursor: pointer;
 }
 
 /* contact css */
