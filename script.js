@@ -162,7 +162,14 @@ gsap.from('.block-6', {
     delay: 0.5
 })
 
-gsap.to(['.navbar', '.explore', '.header-job'], {
+gsap.from('.navbar', {
+    duration: 1,
+    delay: 2.5,
+    opacity: 0,
+    y: -100
+})
+
+gsap.to(['.explore', '.header-job'], {
     duration: 1.5,
     delay: 2.5,
     opacity: 1

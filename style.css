@@ -1,6 +1,7 @@
 .navbar {
-  transition: all 0.25s;
-  opacity: 0;
+  transition:
+    background-color 0.25s,
+    border-bottom 0.25s;
 }
 
 .navbar-brand img {
@@ -382,7 +383,7 @@
   transform: translate(-50%);
 }
 
-.work-click-text {
+.work-hover-text {
   color: white;
   
   font-size: clamp(10px, 3vw, 25px);
@@ -407,7 +408,7 @@
 }
 
 .website:hover .website-img {
-  filter: brightness(0.5) blur(2px);
+  filter: brightness(0.4) blur(2.5px);
   scale: 1.1;
   cursor: pointer;
 }
@@ -418,6 +419,7 @@
   left: 50%;
   padding: 20px;
   transform: translateX(-50%);
+  cursor: pointer;
 }
 
 .web-name,
@@ -426,7 +428,6 @@
   color: white;
   opacity: 0;
   transition: all 0.25s;
-  pointer-events: none;
   transform: translateY(1vw);
 }
 
@@ -443,7 +444,6 @@
 .website:hover .web-description,
 .website:hover .web-btn {
   opacity: 1;
-  pointer-events: auto;
   transform: translateY(-1vw);
 }
 
