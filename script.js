@@ -99,13 +99,16 @@ document.addEventListener("DOMContentLoaded", function () {
 // gsap animations
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from('.circle-shape', {
-    scale: 0.5,
-    background: '#252525',
-    ease: 'power1.inOut',
+gsap.fromTo('.circle-shape', {
+    scale: 0.5, '--innerColor': '#252525'
+},
+{
+    scale: 1,
+    '--innerColor': '#1F2020',
     duration: 2,
-    delay: 0.5
-})
+    delay: 0.5,
+    ease: 'power1.inOut'
+});
 
 gsap.from('.block-1', {
     x: '-11vw',
@@ -182,6 +185,13 @@ gsap.from(['.about-text', '.about-img'], {
     scrollTrigger: ".about-text",
 })
 
+gsap.from('.form', {
+    y: 100,
+    duration: 2,
+    opacity: 0,
+    scrollTrigger: ".form",
+})
+
 // contact js
 
 const inputs = document.querySelectorAll(".input");
@@ -236,4 +246,24 @@ function handleSubmit(event) {
             console.error("Error:", error);
             alert("There was a problem sending your message.");
         });
+}
+
+// Back to top code
+
+$('document').ready(() => {
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 56 || document.documentElement.scrollTop > 56) {
+            $('#myBtn').fadeIn(200)
+        } else {
+            $('#myBtn').fadeOut(200)
+        }
+    }
+})
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
