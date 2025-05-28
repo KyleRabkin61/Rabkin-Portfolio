@@ -151,8 +151,9 @@
                     v-for="website in websites" key="website.id">
                     <img v-bind:src="website.img" :alt="website.name" class="website-img img-fluid">
                     <div class="website-info d-flex justify-content-center align-items-center flex-column">
-                        <h1 class="web-name">{{ website.name }}</h1>
-                        <button class="web-btn explore">Explore</button>
+                        <h1 class="web-name text-center">{{ website.name }}</h1>
+                        <p class="web-description text-center">{{ website.description }}</p>
+                        <a :href="website.link" target="_blank" class="web-btn btn explore">Explore</a>
                     </div>
                 </div>
             </div>
