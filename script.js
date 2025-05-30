@@ -96,19 +96,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+function openPdf(link) {
+    window.open(link, '_blank');
+}
+
 // gsap animations
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo('.circle-shape', {
     scale: 0.5, '--innerColor': '#252525'
 },
-{
-    scale: 1,
-    '--innerColor': '#1F2020',
-    duration: 2,
-    delay: 0.5,
-    ease: 'power1.inOut'
-});
+    {
+        scale: 1,
+        '--innerColor': '#1F2020',
+        duration: 2,
+        delay: 0.5,
+        ease: 'power1.inOut'
+    });
 
 gsap.from('.block-1', {
     x: '-11vw',

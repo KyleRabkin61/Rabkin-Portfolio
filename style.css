@@ -358,6 +358,11 @@
   cursor: pointer;
 }
 
+.resume-btn {
+  width: 200px;
+  font-size: 25px;
+}
+
 /* work css */
 
 .work {
@@ -861,4 +866,55 @@ textarea.input {
 
 .my-btn:active {
     box-shadow: none;
+}
+
+/* footer css */
+
+footer {
+  height: auto;
+  background: #1F2020;
+  padding: 50px 50px;
+}
+
+footer h1 {
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 50px;
+}
+
+footer .footer-content {
+  color: white;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(15px, 3vw, 20px);
+}
+
+footer .footer-icon {
+  position: relative;
+  bottom: 8px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 800px;
+  margin: 30px auto 30px auto;
+}
+
+.footer-bottom p {
+  margin-bottom: 1rem;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(15px, 3vw, 25px);
+  color: white;
+
+  transition: 0.5s;
+}
+
+.footer-bottom a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-bottom a p:hover {
+  color: #7DABFF;
 }
