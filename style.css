@@ -874,24 +874,9 @@ footer {
   height: auto;
   background: #1F2020;
   padding: 50px 50px;
+  font-family: "Ancizar Sans", sans-serif;
 }
 
-footer h1 {
-  color: white;
-  font-family: "Josefin Sans", sans-serif;
-  margin-bottom: 50px;
-}
-
-footer .footer-content {
-  color: white;
-  font-family: "Instrument Sans", sans-serif;
-  font-size: clamp(15px, 3vw, 20px);
-}
-
-footer .footer-icon {
-  position: relative;
-  bottom: 8px;
-}
 
 .footer-bottom {
   text-align: center;
@@ -903,7 +888,6 @@ footer .footer-icon {
 
 .footer-bottom p {
   margin-bottom: 1rem;
-  font-family: "Instrument Sans", sans-serif;
   font-size: clamp(15px, 3vw, 25px);
   color: white;
 
