@@ -437,6 +437,7 @@
   opacity: 0;
   transition: all 0.25s;
   transform: translateY(1vw);
+  font-family: "Ancizar Sans", sans-serif;
 }
 
 .web-name {
