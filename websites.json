@@ -20,19 +20,19 @@
     {
         "name": "Stevens Recruitment Website",
         "img": "website-imgs/stevens.png",
-        "description": "lorem",
+        "description": "This recruitment website showcased why Stevens is a good choice for a school, including popular majors and extra curricular activities.",
         "link": "https://kylerabkin61.github.io/College-Recruitment-Website/"
     },
     {
         "name": "Little Bird Toy Company Website",
         "img": "website-imgs/little-bird.png",
-        "description": "lorem",
+        "description": "This website was for a simulated client that has a wooden toy shop, focussing on the products that a customer can buy, as well as a contact form.",
         "link": "https://kylerabkin61.github.io/Final-Project/"
     },
     {
         "name": "On My Birthday Website",
         "img": "website-imgs/on-my-bday.png",
-        "description": "lorem",
+        "description": "This website focused on practicing javscript skills. Specifically, altering HTML elements based on what event was showcased.",
         "link": "https://kylerabkin61.github.io/On-my-Birthday/"
     }
 ]
